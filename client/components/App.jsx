@@ -1,6 +1,7 @@
 // top-level App component
 import React from 'react';
 import axios from 'axios';
+import NASA_KEY from '../secrets';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -27,7 +28,7 @@ export default class App extends React.Component {
   };
 
   getPhoto() {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=0mVJIl5O4WONcXXyKuxnmbtz5aA1AzaKOhqeDPgL')
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=' + NASA_KEY)
     .then((data) => {
       this.setState({
         photo: data.data,
