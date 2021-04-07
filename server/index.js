@@ -6,10 +6,11 @@ const db = require('./db/model');
 app.use(express.json());
 app.use(express.static('dist'));
 
-// Add routing!
-app.get('/', (req, res) => {
-  res.render('index.html');
-});
+// // Add routing!
+// Might work for rendering if we were doing SSR (server side rendering)
+// app.get('/', (req, res) => {
+//   res.render('index');
+// });
 
 app.post('/image', (req, res) => {
   // send the data to the database
