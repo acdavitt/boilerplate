@@ -1,0 +1,11 @@
+DROP DATABASE IF EXISTS nasa;
+
+CREATE DATABASE nasa;
+USE nasa;
+
+CREATE TABLE photos (
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255),
+  link VARCHAR(255),
+  explanation VARCHAR(1000)
+)
